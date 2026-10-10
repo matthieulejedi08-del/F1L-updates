@@ -8,7 +8,7 @@ Preparation des mises a jour Wi-Fi F1L pour le volant ESP32 compatible.
 
 Le mecanisme de mise a jour est en cours d'integration et de validation.
 Les archives de preparation et les tests sur ordinateur ne constituent pas
-un firmware a flasher. Ne pas les envoyer via **Add dashboard**.
+un firmware a flasher. Ne pas les envoyer via **MVH Custom**.
 
 ## Fonctionnement prevu
 
@@ -27,7 +27,7 @@ devra etre teste sur le materiel avant diffusion.
 
 ## Deux installations distinctes
 
-- **Add dashboard** installe les fichiers d'un dashboard compatible.
+- **MVH Custom** installe les fichiers d'un dashboard compatible.
 - **Mise a jour firmware** installera l'application du volant.
 
 Une image USB complete ne devra jamais etre envoyee a l'installateur OTA.
@@ -48,3 +48,9 @@ La cle privee de signature ne sera jamais publiee dans ce depot.
 
 Les releases seront ajoutees uniquement apres ces validations. Il n'y a
 actuellement aucun lien de telechargement de mise a jour a utiliser.
+
+## Suivi du projet
+
+Le [statut du projet](project-status.json) est informatif uniquement : ce n'est
+pas un manifeste de mise a jour et il ne contient aucun firmware a installer.
+Les validations fonctionnelles de la base ne remplacent pas les essais OTA.
