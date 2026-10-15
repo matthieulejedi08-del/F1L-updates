@@ -16,15 +16,19 @@ Si votre volant dispose de la fonction de mise à jour Wi-Fi :
 
 Gardez le volant alimenté et arrêtez la télémétrie pendant la mise à jour.
 
-## 🏎️ Télécharger le dashboard F1 V2
+## 📚 Bibliothèque de dashboards
 
-Le dashboard **F1 V2** est accessible à tous, pour les volants F1L compatibles.
+Découvrez les dashboards F1L en accès libre. Chaque modèle dispose d'un aperçu, d'une description et d'un lien de téléchargement. Les prochains modèles seront ajoutés dans ce même catalogue.
 
-**[⬇️ Télécharger F1 V2 (.f1l)](https://raw.githubusercontent.com/matthieumartin09/F1L-updates/main/F1_V2.f1l)**
+| Aperçu | Dashboard et téléchargement |
+|:---:|---|
+| [![Aperçu F1 V2](previews/F1_V2_page1.svg)](DASHBOARDS.md#f1-v2) | **F1 V2** — 3 pages : Course, Voiture et Moteur.<br>**[Télécharger le dashboard (.f1l)](https://raw.githubusercontent.com/matthieumartin09/F1L-updates/main/F1_V2.f1l)**<br>[Voir les 3 pages](DASHBOARDS.md#f1-v2) |
 
-Pour l'ajouter au volant, ouvrez sa page Web, sélectionnez **ADD DASHBOARD** (ou l'option d'ajout de dashboard), puis choisissez le fichier `F1_V2.f1l` téléchargé.
+**[Voir tous les dashboards et leurs aperçus](DASHBOARDS.md)**
 
-**Attention :** un dashboard n'est pas un firmware. Ne l'installez ni par flash USB ni avec la fonction de mise à jour Wi-Fi du programme. Vérifiez la compatibilité de votre installation F1L.
+Pour installer un dashboard sur un volant compatible, utilisez **ADD DASHBOARD** depuis la page Web du volant et choisissez le fichier `.f1l`. Ce fichier n'est pas un firmware ; ne l'utilisez ni en flash USB ni comme mise à jour OTA.
+
+*Les aperçus montrent les fonds graphiques du dashboard. Les valeurs dynamiques apparaissent pendant l'utilisation.*
 
 ## 🔒 Première installation — Accès réservé
 

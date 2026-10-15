@@ -10,15 +10,11 @@ Sur la page Web du volant : **MVH Custom → Rechercher une mise à jour**.
 
 [Voir les versions publiées](https://github.com/matthieumartin09/F1L-updates/releases).
 
-## Dashboard F1 V2 — téléchargement public
+## Bibliothèque de dashboards
 
-Le fichier **F1 V2** est disponible gratuitement :
+Tous les dashboards disponibles, leurs aperçus et leurs liens de téléchargement se trouvent dans le **[catalogue des dashboards](DASHBOARDS.md)**. Les futurs modèles seront ajoutés dans cette même rubrique.
 
-**[Télécharger F1_V2.f1l](https://raw.githubusercontent.com/matthieumartin09/F1L-updates/main/F1_V2.f1l)**
-
-Pour l'installer sur un volant F1L compatible, ouvrez sa page Web, sélectionnez **ADD DASHBOARD** (ou l'option d'ajout de dashboard), puis choisissez ce fichier `.f1l`.
-
-Ce fichier est un dashboard, **pas une mise à jour du firmware**. Ne l'utilisez pas avec la fonction OTA ni comme image de flash USB.
+Pour installer un dashboard sur un volant compatible, téléchargez son fichier `.f1l`, ouvrez la page Web du volant et choisissez **ADD DASHBOARD** (ou l'option équivalente). L'ajout d'un dashboard est différent d'une mise à jour du firmware.
 
 ## Première installation
 
