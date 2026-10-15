@@ -6,19 +6,5 @@
   "installable_firmware_url": "https://github.com/matthieulejedi08-del/F1L-updates/releases/download/R2F150/firmware.bin",
   "update_manifest_url": "https://github.com/matthieulejedi08-del/F1L-updates/releases/download/R2F150/manifest.json",
   "informational_only": true,
-  "validated_base_checks": [
-    "settings",
-    "custom_page_navigation",
-    "telemetry",
-    "signed_ota_install_private_https_test",
-    "active_app_valid_two_boots",
-    "github_signature_verification_twice"
-  ],
-  "remaining_checks": [
-    "clean_16mb_usb_image_full_hardware_flash",
-    "automatic_rollback_not_guaranteed",
-    "interrupted_transfer_and_failure_recovery",
-    "verify_hardware_compatibility_and_backup_before_installation"
-  ],
-  "note": "Public R2F150 release available as of 2026-10-15. Informational only: not an OTA manifest. Validation details and limits are in the release notes."
+  "note": "R2F150 disponible. Ce fichier est informatif et ne remplace ni les instructions d'installation ni le manifeste de mise a jour signe."
 }
