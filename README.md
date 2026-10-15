@@ -12,9 +12,19 @@ Si votre volant dispose de la fonction de mise à jour Wi-Fi :
 2. Ouvrez sa page Web, puis **MVH Custom**.
 3. Choisissez **Rechercher une mise à jour** et suivez les instructions.
 
-[Voir les versions et mises à jour disponibles](https://github.com/matthieulejedi08-del/F1L-updates/releases)
+[Voir les versions et mises à jour disponibles](https://github.com/matthieumartin09/F1L-updates/releases)
 
 Gardez le volant alimenté et arrêtez la télémétrie pendant la mise à jour.
+
+## 🏎️ Télécharger le dashboard F1 V2
+
+Le dashboard **F1 V2** est accessible à tous, pour les volants F1L compatibles.
+
+**[⬇️ Télécharger F1 V2 (.f1l)](https://raw.githubusercontent.com/matthieumartin09/F1L-updates/main/F1_V2.f1l)**
+
+Pour l'ajouter au volant, ouvrez sa page Web, sélectionnez **ADD DASHBOARD** (ou l'option d'ajout de dashboard), puis choisissez le fichier `F1_V2.f1l` téléchargé.
+
+**Attention :** un dashboard n'est pas un firmware. Ne l'installez ni par flash USB ni avec la fonction de mise à jour Wi-Fi du programme. Vérifiez la compatibilité de votre installation F1L.
 
 ## 🔒 Première installation — Accès réservé
 
