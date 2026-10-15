@@ -1,40 +1,55 @@
-# Publication du firmware F1L
+# F1L — Informations et précautions
 
-## Version publiée
+Cette page complète le [guide rapide](README.md). Elle explique les différents fichiers et les limites connues, sans demander de manipulations supplémentaires.
 
-La release **R2F150** a été publiée le **15 octobre 2026** : [consulter les fichiers et notes de version](https://github.com/matthieulejedi08-del/F1L-updates/releases/tag/R2F150).
+## Quelle version est disponible ?
 
-Elle est destinée au matériel F1L/MVH **ESP32 16 Mo compatible** et reste un firmware **communautaire non officiel**.
+La version **R2F150**, publiée le **15 octobre 2026**, est disponible sur la [page des téléchargements](https://github.com/matthieulejedi08-del/F1L-updates/releases/tag/R2F150).
 
-## Deux formats à ne jamais confondre
+Elle est prévue **uniquement pour les modèles F1L / MVH compatibles, équipés d'un ESP32 avec 16 Mo de mémoire flash**. Il s'agit d'un firmware communautaire **non officiel**.
 
-| Fichier | Usage |
+## Que dois-je télécharger ?
+
+**Pour une première installation avec un ordinateur :**
+téléchargez [F1L_PUBLIC_R2F150.zip](https://github.com/matthieulejedi08-del/F1L-updates/releases/download/R2F150/F1L_PUBLIC_R2F150.zip), puis suivez le fichier **INSTALLATION.txt**. Une première installation avec l'image complète peut **effacer les réglages et dashboards personnels**.
+
+**Pour mettre à jour un volant déjà compatible :**
+ne téléchargez pas de fichier à installer manuellement. Utilisez la fonction **Rechercher une mise à jour** dans la page Web **MVH Custom** du volant.
+
+**Pour installer un nouveau dashboard :**
+utilisez la fonction d'ajout de dashboards. Ce n'est **pas** la fonction de mise à jour du programme.
+
+## À quoi servent les autres fichiers ?
+
+Ces fichiers servent principalement à la procédure d'installation ou aux vérifications techniques :
+
+| Nom du fichier | Utilité |
 | --- | --- |
-| `F1L_PUBLIC_R2F150_FLASH_COMPLET_16MO.bin` | **Première installation USB** de l'image complète ; remplace aussi les données personnelles présentes dans les 16 Mo. |
-| `firmware.bin` | **Application pour OTA**, pas une image flash complète. À utiliser uniquement via le mécanisme de mise à jour compatible et vérifié. |
-| `manifest.json` et `manifest.sig` | Manifeste de version et signature associée. |
-| `SHA256SUMS.txt` | Empreintes pour contrôler l'intégrité des fichiers téléchargés. |
-| `F1L_PUBLIC_R2F150.zip` et `INSTALLATION.txt` | Paquet public et guide de première installation. |
+| `INSTALLATION.txt` | Instructions pour la première installation. |
+| `F1L_PUBLIC_R2F150_FLASH_COMPLET_16MO.bin` | Image complète destinée à l'installation **USB**, selon le guide. |
+| `firmware.bin` | Programme utilisé par les **mises à jour Wi-Fi** ; ne pas le confondre avec l'image USB complète. |
+| `manifest.json` et `manifest.sig` | Informations de version et signature permettant au volant de vérifier la mise à jour. |
+| `SHA256SUMS.txt` | Liste d'empreintes permettant de contrôler les téléchargements. |
 
-**Important :** une empreinte SHA-256 ne remplace pas une signature. La clé publique doit déjà être intégrée dans le firmware de confiance ; une clé téléchargée en même temps que le manifeste ne devient pas automatiquement fiable. La clé privée de signature n'est pas publiée.
+**N'installez pas ces fichiers au hasard.** L'image complète de 16 Mo ne doit **jamais** être envoyée à l'installateur Wi-Fi. Une empreinte seule ne remplace pas la vérification de signature.
 
-## Validations annoncées pour R2F150
+## Qu'est-ce qui a été testé ?
 
-Selon les notes de la [release](https://github.com/matthieulejedi08-del/F1L-updates/releases/tag/R2F150) :
+Selon les [notes de la version R2F150](https://github.com/matthieulejedi08-del/F1L-updates/releases/tag/R2F150) :
 
-- installation OTA signée réalisée sur le volant de test depuis un serveur HTTPS privé ;
-- partition active vérifiée `VALID` et deux redémarrages réussis ;
-- commandes **SETTING**, **UP/DOWN** et télémétrie validées sur ce volant ;
-- deux vérifications ultérieures des signatures GitHub depuis R2F150.
+- Une mise à jour signée a réussi sur un volant de test.
+- Le volant a redémarré deux fois correctement.
+- Les boutons **SETTING**, **UP/DOWN** et la télémétrie ont fonctionné sur ce volant.
+- Deux contrôles de signature ont réussi ensuite depuis GitHub.
 
-**Limites connues :** l'image USB publique nettoyée a été assemblée et contrôlée **hors appareil**, sans reflash complet pendant cet essai. Aucun retour arrière automatique n'est garanti ; conserver l'accès USB est indispensable. Une mention initiale « Wi-Fi non activé » peut rester visible avant que le bouton de recherche n'actualise l'état.
+**Ce qui reste à savoir :** l'image USB complète, préparée sans données personnelles, a été contrôlée sur ordinateur, mais **pas réinstallée intégralement sur le volant pendant cet essai**. Le retour automatique à l'ancienne version après un problème n'est pas garanti. Les coupures et procédures de récupération doivent être prises en compte avant toute installation.
 
-## Points de prudence
+La page Web peut également afficher au départ un ancien message concernant le Wi-Fi ; lancer **Rechercher une mise à jour** actualise son état.
 
-Avant de diffuser ou installer une nouvelle version, vérifier sur matériel : la compatibilité, la conservation des réglages pour les mises à jour applicatives, le rejet des signatures/fichiers invalides, les interruptions de transfert et la récupération après échec. Vérifier également les droits de redistribution des composants du firmware.
+## Précautions importantes
 
-Ne publiez jamais de clé privée, passphrase, identifiant Wi-Fi, jeton GitHub, sauvegarde personnelle ou fichier constructeur sans droit de diffusion. Le dépôt public ne contient pas les sources du firmware.
+Vérifiez toujours le modèle, conservez une sauvegarde et prévoyez un moyen de récupération **USB**. Pendant une mise à jour, gardez l'alimentation stable, la connexion Internet active et la télémétrie arrêtée.
 
-## Statut du dépôt
+Pour les personnes qui republient ces fichiers : ne diffusez ni clés privées, ni identifiants Wi-Fi, ni sauvegardes personnelles, ni composants constructeur sans autorisation. Le code source du firmware n'est pas fourni ici. Les archives automatiques « Source code » de GitHub ne contiennent que les fichiers descriptifs du dépôt.
 
-Le fichier [`project-status.json`](project-status.json) est **informatif uniquement** : ce n'est ni un manifeste signé, ni un mécanisme permettant au volant d'installer une mise à jour. Pour les instructions d'installation, utilisez les **assets de la release**.
+Le fichier [`project-status.json`](project-status.json) est une information sur le projet : **ce n'est pas un fichier de mise à jour**.
