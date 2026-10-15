@@ -1,21 +1,24 @@
 {
   "schema": "f1l.project-status/1",
-  "updated": "2026-10-10",
-  "stage": "firmware-integration",
-  "ota_available": false,
-  "installable_firmware_url": null,
-  "update_manifest_url": null,
+  "updated": "2026-10-15",
+  "stage": "release-published",
+  "ota_available": true,
+  "installable_firmware_url": "https://github.com/matthieulejedi08-del/F1L-updates/releases/download/R2F150/firmware.bin",
+  "update_manifest_url": "https://github.com/matthieulejedi08-del/F1L-updates/releases/download/R2F150/manifest.json",
   "informational_only": true,
   "validated_base_checks": [
     "settings",
     "custom_page_navigation",
-    "telemetry"
+    "telemetry",
+    "signed_ota_install_private_https_test",
+    "active_app_valid_two_boots",
+    "github_signature_verification_twice"
   ],
   "remaining_checks": [
-    "persistent_ota_initialization",
-    "native_activity_exclusion",
-    "tls_and_trust_configuration",
-    "hardware_ota_slot_and_rollback_tests"
+    "clean_16mb_usb_image_full_hardware_flash",
+    "automatic_rollback_not_guaranteed",
+    "interrupted_transfer_and_failure_recovery",
+    "verify_hardware_compatibility_and_backup_before_installation"
   ],
-  "note": "This file is not an OTA manifest. No OTA release is available."
+  "note": "Public R2F150 release available as of 2026-10-15. Informational only: not an OTA manifest. Validation details and limits are in the release notes."
 }
