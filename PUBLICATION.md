@@ -1,37 +1,31 @@
-# F1L — Guide et informations utiles
+# F1L — Informations utiles
 
-[← Retour à la page d'accueil](README.md)
+[← Retour à l'accueil](README.md)
 
-## Version disponible
+## Mises à jour Wi-Fi
 
-**R2F150** — [Accéder aux téléchargements](https://github.com/matthieulejedi08-del/F1L-updates/releases/tag/R2F150)
+Les mises à jour sont destinées aux volants disposant déjà d'une installation F1L compatible.
 
-Ce programme communautaire **non officiel** est destiné aux modèles F1L / MVH compatibles, équipés d'un ESP32 avec **16 Mo de mémoire flash**.
+Sur la page Web du volant : **MVH Custom → Rechercher une mise à jour**.
 
-## Comment installer ?
+[Voir les versions publiées](https://github.com/matthieulejedi08-del/F1L-updates/releases).
 
-**Première installation :** téléchargez le [pack complet](https://github.com/matthieulejedi08-del/F1L-updates/releases/download/R2F150/F1L_PUBLIC_R2F150.zip) et suivez **INSTALLATION.txt** avec un ordinateur et un câble USB. Cette méthode efface les réglages et dashboards personnels présents sur le volant : **sauvegardez-les au préalable**.
+## Première installation
 
-**Mise à jour suivante :** sur un volant qui dispose déjà de la fonction de mise à jour Wi-Fi, ouvrez sa page Web, puis **MVH Custom → Rechercher une mise à jour**.
+**Accès réservé.** Le pack d'installation initial est fourni directement aux personnes autorisées, avec son guide. Aucun lien public n'est proposé.
 
-**Nouveau dashboard :** utilisez la fonction dédiée à l'installation des dashboards, et non celle de mise à jour du programme.
+Avant l'installation, vérifiez la compatibilité du matériel et sauvegardez les réglages et dashboards personnels : une image complète peut les effacer.
 
-## Les fichiers du téléchargement
+## Installation de dashboards
 
-| Fichier | À quoi sert-il ? |
-| --- | --- |
-| `F1L_PUBLIC_R2F150.zip` | Pack à utiliser pour la première installation. |
-| `INSTALLATION.txt` | Guide à suivre avant de brancher le volant. |
-| `F1L_PUBLIC_R2F150_FLASH_COMPLET_16MO.bin` | Image complète pour l'installation USB uniquement. |
-| `firmware.bin` | Fichier du programme pour les mises à jour Wi-Fi compatibles. |
-| `manifest.json`, `manifest.sig`, `SHA256SUMS.txt` | Fichiers de vérification associés à la version. |
+Pour ajouter un dashboard, utilisez l'option prévue sur la page Web du volant. N'utilisez pas cette option pour installer le programme du volant.
 
-**Ne confondez pas** le fichier USB complet de 16 Mo et `firmware.bin`. N'utilisez pas l'option « Ajouter un dashboard » pour installer l'un de ces fichiers.
+## Précautions
 
-## Quelques précautions
+Pendant une mise à jour, laissez le volant alimenté, connecté à Internet et sans télémétrie active. Gardez une possibilité de dépannage par USB en cas de difficulté.
 
-Vérifiez la compatibilité du matériel et conservez une sauvegarde ainsi qu'un moyen de récupération par USB. Pendant une mise à jour Wi-Fi, laissez le volant alimenté, connecté à Internet et sans télémétrie active. Un dépannage par USB peut être nécessaire en cas de problème.
+Les fichiers techniques associés aux mises à jour Wi-Fi sont utilisés par le système pour vérifier la version et l'intégrité du programme. Ne tentez pas de les installer manuellement comme des dashboards.
 
-Les fichiers publiés ne doivent contenir ni données personnelles, ni mots de passe, ni clés privées. Les composants tiers restent soumis à leurs droits de redistribution.
+Ce programme est communautaire et **non officiel**. Ne redistribuez pas de données personnelles, d'identifiants ou de composants tiers sans autorisation.
 
-Le fichier `project-status.json` du dépôt est fourni **à titre d'information uniquement** et ne doit pas être utilisé pour mettre à jour le volant.
+Le fichier `project-status.json` est uniquement informatif : ce n'est pas un fichier d'installation.
