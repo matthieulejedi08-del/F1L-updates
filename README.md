@@ -22,7 +22,7 @@ Découvrez les dashboards F1L en accès libre. Chaque modèle dispose d'un aper�
 
 | Aperçu | Dashboard et téléchargement |
 |:---:|---|
-| [![Aperçu F1 V2](previews/F1_V2_page1.svg)](DASHBOARDS.md#f1-v2) | **F1 V2** — 3 pages : Course, Voiture et Moteur.<br>**[Télécharger le dashboard (.f1l)](F1_V2.f1l)**<br>[Voir les 3 pages](DASHBOARDS.md#f1-v2) |
+| [![Aperçu F1 V2](previews/F1_V2_page1.svg)](DASHBOARDS.md#f1-v2) | **F1 V2** — 3 pages : Course, Voiture et Moteur.<br>**[Télécharger le dashboard (.f1l)](https://raw.githubusercontent.com/matthieumartin09/F1L-updates/main/F1_V2.f1l)**<br>[Voir les 3 pages](DASHBOARDS.md#f1-v2) |
 
 **[Voir tous les dashboards et leurs aperçus](DASHBOARDS.md)**
 
