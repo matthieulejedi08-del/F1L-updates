@@ -1,56 +1,34 @@
-# F1L-updates
+# F1L — mises à jour du firmware
 
-Preparation des mises a jour Wi-Fi F1L pour le volant ESP32 compatible.
+Firmware communautaire, **non officiel MVH Studios**, destiné uniquement aux volants F1L/MVH ESP32 **16 Mo compatibles**. Ce dépôt publie les informations et fichiers nécessaires aux mises à jour ; il ne contient **pas** les sources du firmware.
 
-## Etat actuel
+## Dernière version : R2F150
 
-**Aucune version OTA installable n'est disponible.**
+**Publiée le 15 octobre 2026.** [Voir la version R2F150 et ses fichiers](https://github.com/matthieulejedi08-del/F1L-updates/releases/tag/R2F150).
 
-Le mecanisme de mise a jour est en cours d'integration et de validation.
-Les archives de preparation et les tests sur ordinateur ne constituent pas
-un firmware a flasher. Ne pas les envoyer via **MVH Custom**.
+La publication décrit une installation OTA signée réussie depuis un serveur HTTPS privé, une partition active marquée `VALID`, deux démarrages réussis et deux vérifications de signature depuis GitHub. **L'image USB complète n'a pas été reflashée intégralement pendant cet essai.** Le retour automatique en cas d'échec n'est pas garanti.
 
-## Fonctionnement prevu
+## Quelle méthode utiliser ?
 
-Une premiere installation USB du firmware compatible OTA sera necessaire.
-Ensuite, la page web du volant proposera une recherche de mise a jour,
-les changements de version et une confirmation avant installation.
+| Action | Fichier ou interface | À savoir |
+| --- | --- | --- |
+| Première installation par USB | `F1L_PUBLIC_R2F150.zip`, puis `INSTALLATION.txt` | L'image complète **16 Mo** remplace également le stockage personnel présent sur le volant : sauvegardez préalablement vos réglages et dashboards. |
+| Mise à jour ultérieure par Wi-Fi | Page Web du volant → **MVH Custom** → recherche de mise à jour → confirmation | Nécessite un firmware compatible, une connexion Internet et une alimentation stable. Arrêtez la télémétrie pendant l'opération. |
+| Installation d'un dashboard | Fonction d'ajout de dashboard dans **MVH Custom** | Ne pas y envoyer de fichier de firmware. |
 
-Le volant devra etre connecte a un reseau avec acces Internet. Aucun compte
-GitHub ni mot de passe GitHub ne devra etre configure sur le volant pour
-telecharger les versions publiques.
+**Ne confondez pas** `firmware.bin` (application OTA) et `F1L_PUBLIC_R2F150_FLASH_COMPLET_16MO.bin` (image USB complète). N'envoyez jamais l'image 16 Mo à l'installateur OTA.
 
-Les reglages et dashboards devront etre conserves. La nouvelle application
-sera ecrite dans l'emplacement inactif, apres verification de compatibilite,
-signature et integrite. Le retour automatique en cas d'echec de demarrage
-devra etre teste sur le materiel avant diffusion.
+## Avant toute installation
 
-## Deux installations distinctes
+- Vérifiez la compatibilité exacte de votre matériel et lisez **`INSTALLATION.txt`** dans la [release](https://github.com/matthieulejedi08-del/F1L-updates/releases/tag/R2F150).
+- Conservez une sauvegarde de vos données et un moyen de récupération par **USB**.
+- Ne coupez pas l'alimentation pendant l'installation ; ne lancez pas de télémétrie simultanément.
+- N'installez aucun fichier simplement parce qu'il porte le nom `firmware.bin` : utilisez la procédure de mise à jour qui vérifie la signature, la compatibilité et l'intégrité.
 
-- **MVH Custom** installe les fichiers d'un dashboard compatible.
-- **Mise a jour firmware** installera l'application du volant.
+## Documentation
 
-Une image USB complete ne devra jamais etre envoyee a l'installateur OTA.
-Les boutons, fichiers autorises et commandes exactes seront documentes
-avec la premiere version effectivement validee.
+- [Publication et contrôles de sécurité](PUBLICATION.md)
+- [Statut informatif du projet](project-status.json) — **ce fichier n'est pas un manifeste OTA**.
+- [Toutes les versions publiées](https://github.com/matthieulejedi08-del/F1L-updates/releases)
 
-## Conditions avant publication
-
-- Verification de la signature et refus des fichiers modifies ou incompatibles.
-- Essais sur les deux emplacements d'application.
-- Essais de coupures reseau et alimentation, puis de retour a une version saine.
-- Verification de la conservation des reglages et dashboards.
-- Controle des droits de redistribution du firmware et des ressources.
-- Absence de donnees personnelles, sauvegardes privees et cles privees.
-
-La cle publique de verification sera embarquee dans le firmware de confiance.
-La cle privee de signature ne sera jamais publiee dans ce depot.
-
-Les releases seront ajoutees uniquement apres ces validations. Il n'y a
-actuellement aucun lien de telechargement de mise a jour a utiliser.
-
-## Suivi du projet
-
-Le [statut du projet](project-status.json) est informatif uniquement : ce n'est
-pas un manifeste de mise a jour et il ne contient aucun firmware a installer.
-Les validations fonctionnelles de la base ne remplacent pas les essais OTA.
+Les archives automatiques **Source code** de GitHub contiennent uniquement les fichiers descriptifs de ce dépôt, pas le code source embarqué.
