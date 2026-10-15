@@ -1,56 +1,38 @@
-# F1L-updates
+# F1L — Mises à jour de votre volant
 
-Preparation des mises a jour Wi-Fi F1L pour le volant ESP32 compatible.
+**Version : R2F150**
 
-## Etat actuel
+Ce projet communautaire **non officiel** permet de mettre à jour certains volants **F1L / MVH**.
 
-**Aucune version OTA installable n'est disponible.**
+## 🔄 Vous possédez déjà F1L ?
 
-Le mecanisme de mise a jour est en cours d'integration et de validation.
-Les archives de preparation et les tests sur ordinateur ne constituent pas
-un firmware a flasher. Ne pas les envoyer via **MVH Custom**.
+Si votre volant dispose de la fonction de mise à jour Wi-Fi :
 
-## Fonctionnement prevu
+1. Connectez-le à Internet.
+2. Ouvrez sa page Web, puis **MVH Custom**.
+3. Choisissez **Rechercher une mise à jour** et suivez les instructions.
 
-Une premiere installation USB du firmware compatible OTA sera necessaire.
-Ensuite, la page web du volant proposera une recherche de mise a jour,
-les changements de version et une confirmation avant installation.
+[Voir les versions et mises à jour disponibles](https://github.com/matthieulejedi08-del/F1L-updates/releases)
 
-Le volant devra etre connecte a un reseau avec acces Internet. Aucun compte
-GitHub ni mot de passe GitHub ne devra etre configure sur le volant pour
-telecharger les versions publiques.
+Gardez le volant alimenté et arrêtez la télémétrie pendant la mise à jour.
 
-Les reglages et dashboards devront etre conserves. La nouvelle application
-sera ecrite dans l'emplacement inactif, apres verification de compatibilite,
-signature et integrite. Le retour automatique en cas d'echec de demarrage
-devra etre teste sur le materiel avant diffusion.
+## 🔒 Première installation — Accès réservé
 
-## Deux installations distinctes
+Le programme de première installation est **distribué uniquement aux personnes autorisées**. Il n'est pas proposé en téléchargement libre sur cette page.
 
-- **MVH Custom** installe les fichiers d'un dashboard compatible.
-- **Mise a jour firmware** installera l'application du volant.
+Si vous avez reçu ce programme directement, suivez **uniquement les instructions qui l'accompagnent**.
 
-Une image USB complete ne devra jamais etre envoyee a l'installateur OTA.
-Les boutons, fichiers autorises et commandes exactes seront documentes
-avec la premiere version effectivement validee.
+**Important :** une première installation avec une image complète peut effacer les réglages et dashboards personnels du volant. Effectuez une sauvegarde avant toute installation.
 
-## Conditions avant publication
+## ℹ️ À savoir
 
-- Verification de la signature et refus des fichiers modifies ou incompatibles.
-- Essais sur les deux emplacements d'application.
-- Essais de coupures reseau et alimentation, puis de retour a une version saine.
-- Verification de la conservation des reglages et dashboards.
-- Controle des droits de redistribution du firmware et des ressources.
-- Absence de donnees personnelles, sauvegardes privees et cles privees.
+- Vérifiez la compatibilité de votre volant avant toute installation.
+- Ne coupez pas l'alimentation pendant une mise à jour.
+- Gardez un moyen de dépannage par USB en cas de problème.
+- L'installation d'un **dashboard** et la mise à jour du **programme du volant** sont deux opérations différentes.
 
-La cle publique de verification sera embarquee dans le firmware de confiance.
-La cle privee de signature ne sera jamais publiee dans ce depot.
+[Informations complémentaires et précautions](PUBLICATION.md)
 
-Les releases seront ajoutees uniquement apres ces validations. Il n'y a
-actuellement aucun lien de telechargement de mise a jour a utiliser.
+---
 
-## Suivi du projet
-
-Le [statut du projet](project-status.json) est informatif uniquement : ce n'est
-pas un manifeste de mise a jour et il ne contient aucun firmware a installer.
-Les validations fonctionnelles de la base ne remplacent pas les essais OTA.
+*Projet communautaire non officiel, indépendant de MVH Studios.*
