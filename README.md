@@ -1,38 +1,38 @@
 # F1L — Mises à jour de votre volant
 
-**Version disponible : R2F150**
+**Version : R2F150**
 
-### [📥 Télécharger la dernière version](https://github.com/matthieulejedi08-del/F1L-updates/releases/tag/R2F150)
+Ce projet communautaire **non officiel** permet de mettre à jour certains volants **F1L / MVH**.
 
-Ce projet permet de mettre à jour certains volants **F1L / MVH**. Il s'agit d'un programme communautaire **non officiel**, indépendant de MVH Studios.
+## 🔄 Vous possédez déjà F1L ?
 
-## 🔄 Mettre à jour votre volant par Wi-Fi
+Si votre volant dispose de la fonction de mise à jour Wi-Fi :
 
-*Si votre volant possède déjà la fonction de mise à jour :*
-
-1. Connectez votre volant à Internet.
+1. Connectez-le à Internet.
 2. Ouvrez sa page Web, puis **MVH Custom**.
-3. Sélectionnez **Rechercher une mise à jour** et suivez les instructions.
+3. Choisissez **Rechercher une mise à jour** et suivez les instructions.
 
-Laissez le volant allumé et arrêtez la télémétrie pendant l'opération.
+[Voir les versions et mises à jour disponibles](https://github.com/matthieulejedi08-del/F1L-updates/releases)
 
-## 🔌 Première installation avec un ordinateur
+Gardez le volant alimenté et arrêtez la télémétrie pendant la mise à jour.
 
-1. [Téléchargez le pack d'installation](https://github.com/matthieulejedi08-del/F1L-updates/releases/download/R2F150/F1L_PUBLIC_R2F150.zip).
-2. Ouvrez le fichier **INSTALLATION.txt** inclus dans le pack.
-3. Suivez les étapes indiquées avec un ordinateur et un câble USB.
+## 🔒 Première installation — Accès réservé
 
-**Important : la première installation avec l'image complète efface les réglages et dashboards personnels du volant. Pensez à les sauvegarder avant de commencer.**
+Le programme de première installation est **distribué uniquement aux personnes autorisées**. Il n'est pas proposé en téléchargement libre sur cette page.
 
-## ℹ️ Avant de commencer
+Si vous avez reçu ce programme directement, suivez **uniquement les instructions qui l'accompagnent**.
 
-- Vérifiez que votre volant est **compatible F1L / MVH, avec ESP32 et mémoire flash de 16 Mo**.
-- Ne coupez pas l'alimentation pendant l'installation.
-- Gardez un moyen de récupération par USB en cas de difficulté.
-- Pour ajouter un dashboard, utilisez la fonction dédiée : elle est différente de la mise à jour du volant.
+**Important :** une première installation avec une image complète peut effacer les réglages et dashboards personnels du volant. Effectuez une sauvegarde avant toute installation.
 
-[Consulter les informations d'installation et de sécurité](PUBLICATION.md)
+## ℹ️ À savoir
+
+- Vérifiez la compatibilité de votre volant avant toute installation.
+- Ne coupez pas l'alimentation pendant une mise à jour.
+- Gardez un moyen de dépannage par USB en cas de problème.
+- L'installation d'un **dashboard** et la mise à jour du **programme du volant** sont deux opérations différentes.
+
+[Informations complémentaires et précautions](PUBLICATION.md)
 
 ---
 
-*Projet communautaire non officiel. Si vous avez un doute sur la compatibilité de votre volant, vérifiez-la avant toute installation.*
+*Projet communautaire non officiel, indépendant de MVH Studios.*
