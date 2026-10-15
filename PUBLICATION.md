@@ -1,45 +1,40 @@
-# Publication des mises a jour
+# Publication du firmware F1L
 
-Aucune release OTA installable n'est disponible actuellement.
+## Version publiée
 
-## Deux distributions distinctes
+La release **R2F150** a été publiée le **15 octobre 2026** : [consulter les fichiers et notes de version](https://github.com/matthieulejedi08-del/F1L-updates/releases/tag/R2F150).
 
-La premiere installation USB utilise une image flash complete publique,
-nettoyee des donnees personnelles. Elle configure les partitions et installe
-le firmware qui saura verifier les mises a jour.
+Elle est destinée au matériel F1L/MVH **ESP32 16 Mo compatible** et reste un firmware **communautaire non officiel**.
 
-Une mise a jour Wi-Fi utilise uniquement l'application ESP32 destinee a
-l'emplacement inactif. Une image flash complete ne doit jamais servir d'asset OTA.
+## Deux formats à ne jamais confondre
 
-## Assets d'une future release validee
+| Fichier | Usage |
+| --- | --- |
+| `F1L_PUBLIC_R2F150_FLASH_COMPLET_16MO.bin` | **Première installation USB** de l'image complète ; remplace aussi les données personnelles présentes dans les 16 Mo. |
+| `firmware.bin` | **Application pour OTA**, pas une image flash complète. À utiliser uniquement via le mécanisme de mise à jour compatible et vérifié. |
+| `manifest.json` et `manifest.sig` | Manifeste de version et signature associée. |
+| `SHA256SUMS.txt` | Empreintes pour contrôler l'intégrité des fichiers téléchargés. |
+| `F1L_PUBLIC_R2F150.zip` et `INSTALLATION.txt` | Paquet public et guide de première installation. |
 
-- `firmware.bin` : application compatible, pas une sauvegarde flash complete.
-- `manifest.json` : manifeste signe avec revision, canal et compatibilite.
-- `manifest.sig` : signature du manifeste avec la cle de confiance.
+**Important :** une empreinte SHA-256 ne remplace pas une signature. La clé publique doit déjà être intégrée dans le firmware de confiance ; une clé téléchargée en même temps que le manifeste ne devient pas automatiquement fiable. La clé privée de signature n'est pas publiée.
 
-Une somme SHA-256 ne remplace pas une signature. Le volant devra verifier
-la signature avec sa cle publique embarquee, puis la compatibilite et
-l'integrite de l'application avant de modifier l'emplacement actif.
-La cle publique fournie par un telechargement ne doit pas devenir une
-nouvelle source de confiance.
+## Validations annoncées pour R2F150
 
-## Condition de diffusion
+Selon les notes de la [release](https://github.com/matthieulejedi08-del/F1L-updates/releases/tag/R2F150) :
 
-Les essais sur le materiel doivent confirmer conservation des reglages et
-dashboards, refus des fichiers invalides, fonctionnement des deux emplacements,
-interruption du transfert et retour a une application saine apres un echec.
-Le controle des droits de redistribution fait aussi partie des conditions.
+- installation OTA signée réalisée sur le volant de test depuis un serveur HTTPS privé ;
+- partition active vérifiée `VALID` et deux redémarrages réussis ;
+- commandes **SETTING**, **UP/DOWN** et télémétrie validées sur ce volant ;
+- deux vérifications ultérieures des signatures GitHub depuis R2F150.
 
-Le journal de version, la revision du firmware et les resultats des essais
-doivent correspondre aux fichiers effectivement publies. Un candidat dormant,
-un resultat de simulation ou une archive de recherche ne suffit pas.
+**Limites connues :** l'image USB publique nettoyée a été assemblée et contrôlée **hors appareil**, sans reflash complet pendant cet essai. Aucun retour arrière automatique n'est garanti ; conserver l'accès USB est indispensable. Une mention initiale « Wi-Fi non activé » peut rester visible avant que le bouton de recherche n'actualise l'état.
 
-## Donnees exclues
+## Points de prudence
 
-Ne jamais publier de cle privee, passphrase, identifiants Wi-Fi, jeton GitHub,
-sauvegarde personnelle du volant ou fichier constructeur sans droit de diffusion.
-La cle privee chiffree de signature et sa sauvegarde restent chez l'hote.
-Aucun secret GitHub n'est necessaire sur les volants qui telechargent les releases publiques.
+Avant de diffuser ou installer une nouvelle version, vérifier sur matériel : la compatibilité, la conservation des réglages pour les mises à jour applicatives, le rejet des signatures/fichiers invalides, les interruptions de transfert et la récupération après échec. Vérifier également les droits de redistribution des composants du firmware.
 
-`project-status.json` est seulement informatif. Il ne remplace ni le manifeste
-signe ni les preuves de validation, et n'active aucune fonction du volant.
+Ne publiez jamais de clé privée, passphrase, identifiant Wi-Fi, jeton GitHub, sauvegarde personnelle ou fichier constructeur sans droit de diffusion. Le dépôt public ne contient pas les sources du firmware.
+
+## Statut du dépôt
+
+Le fichier [`project-status.json`](project-status.json) est **informatif uniquement** : ce n'est ni un manifeste signé, ni un mécanisme permettant au volant d'installer une mise à jour. Pour les instructions d'installation, utilisez les **assets de la release**.
