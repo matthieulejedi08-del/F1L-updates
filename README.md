@@ -1,20 +1,32 @@
 # F1L — Mises à jour de votre volant
 
-**Version : R2F150**
-
 Ce projet communautaire **non officiel** permet de mettre à jour certains volants **F1L / MVH**.
 
-## 🔄 Vous possédez déjà F1L ?
+## Toujours obtenir la dernière version
 
-Si votre volant dispose de la fonction de mise à jour Wi-Fi :
+**[Ouvrir la dernière version publiée](https://github.com/matthieumartin09/F1L-updates/releases/latest)**
 
-1. Connectez-le à Internet.
-2. Ouvrez sa page Web, puis **MVH Custom**.
-3. Choisissez **Rechercher une mise à jour** et suivez les instructions.
+C'est le lien permanent à partager aux utilisateurs déjà équipés de F1L. Il suit automatiquement la release marquée « Latest » : aucun numéro de version à modifier dans le lien.
+Un ancien fichier déjà téléchargé conserve sa version ; téléchargez à nouveau depuis ce lien pour obtenir la dernière publication.
 
-[Voir les versions et mises à jour disponibles](https://github.com/matthieumartin09/F1L-updates/releases)
+## Mettre à jour directement depuis le volant
 
-Gardez le volant alimenté et arrêtez la télémétrie pendant la mise à jour.
+À partir de R2F154, lorsque le volant dispose du Wi-Fi de la box enregistré :
+
+1. Au démarrage, laissez le volant connecté à ce Wi-Fi. Il recherche une mise à jour sur GitHub en arrière-plan.
+2. Si l'icône orange apparaît sur l'écran d'attente, faites un **appui long sur Settings**.
+3. Confirmez par un **second appui court sur Settings**. Haut/Bas annule ; la proposition expire après 15 secondes.
+4. Laissez l'installation et le redémarrage se terminer, puis vérifiez la version dans **Settings**.
+
+Ce parcours ne nécessite ni PC, ni téléphone, ni connexion au point d'accès `10.10.10.1`. La connexion Internet utilisée est celle du volant vers la box. La notification est masquée dès le début de la télémétrie.
+
+### Si vous utilisez une version antérieure
+
+1. Arrêtez la télémétrie et ouvrez **MVH Custom** comme d'habitude.
+2. Choisissez **Rechercher une mise à jour**, puis **Installer**.
+3. Après redémarrage, vérifiez la version installée dans Settings et dans la page Web, lorsque votre version propose cet affichage.
+
+Gardez une alimentation stable pendant l'installation. La mention « Installation acceptée » ne confirme pas à elle seule que la nouvelle version a démarré.
 
 ## 📚 Bibliothèque de dashboards
 
